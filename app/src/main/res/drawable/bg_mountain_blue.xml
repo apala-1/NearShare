@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="412dp"
+    android:height="350dp"
+    android:viewportWidth="412"
+    android:viewportHeight="350"
+    >
+
+    <!-- Mountain Shape -->
+    <path
+        android:fillColor="#0B3C73"
+        android:pathData="M0, 0 L122,140 L240,0 L240, 0 Z
+                          M240, 0 L310,0 L380,100 L420 0 Z
+                         "
+        />
+    <!--    412 915-->
+</vector>
