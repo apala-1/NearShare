@@ -8,4 +8,74 @@
     android:background="@drawable/gradient_background"
     tools:context=".ui.activity.LoginActivity">
 
+    <ImageView
+        android:layout_width="415dp"
+        android:layout_height="357dp"
+        android:src="@drawable/bg_mountain_blue" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="87dp"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        app:srcCompat="@drawable/bg_mountain_green"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        app:layout_editor_absoluteX="41dp"
+        app:layout_editor_absoluteY="345dp"
+        android:background="@drawable/button_background"
+        android:hint="email"
+        android:paddingLeft="20dp"
+        />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        app:layout_editor_absoluteX="41dp"
+        app:layout_editor_absoluteY="405dp"
+        android:background="@drawable/button_background"
+        android:hint="password"
+        android:paddingLeft="20dp"
+        />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_background"
+        android:text="Log In"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="475dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="520dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
