@@ -43,7 +43,7 @@
         android:id="@+id/work"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
+        android:layout_marginStart="40dp"
         android:text="Architect"
         android:textColor="#565656"
         android:textStyle="bold"
@@ -54,7 +54,7 @@
         android:id="@+id/mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="6dp"
         android:text="johndoe@email.com"
         android:textColor="#565656"
@@ -66,7 +66,7 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="118dp"
         android:fontFamily="@font/opensans"
         android:text="John Doe"
@@ -111,6 +111,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
+
     <ImageView
         android:id="@+id/bgBlue"
         android:layout_width="320dp"
@@ -120,6 +121,31 @@
         android:src="@drawable/blueno_border"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintStart_toEndOf="@+id/contact"
+        app:layout_constraintTop_toTopOf="@+id/bgBlue" />
+
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/opensans"
+        android:text="Contact Information"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/bgBlue"
+        app:layout_constraintTop_toTopOf="@+id/bgBlue" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerDevices"
@@ -208,17 +234,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bgBlue" />
 
-    <TextView
-        android:id="@+id/contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Information"
-        android:fontFamily="@font/opensans"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="358dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
