@@ -1,35 +1,33 @@
 package com.example.nearshare.ui.activity
 
-import android.Manifest
-import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.example.nearshare.R
 import com.example.nearshare.databinding.ActivityDashboardBinding
 import com.example.nearshare.ui.Fragment.HomeFragment
-import com.google.android.material.navigation.NavigationView
+import com.example.nearshare.ui.Fragment.ProfileFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class DashboardActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityDashboardBinding.inflate(layoutInflater)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val homeFragment = HomeFragment()
+        binding.btmMenu.setOnNavigationItemSelectedListener(this)
 
-        makeCurrentFragment(homeFragment)
+        makeCurrentFragment(HomeFragment())
 
         enableEdgeToEdge()
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -37,18 +35,23 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         }
     }
 
-    private fun makeCurrentFragment(fragment: HomeFragment) =
+    private fun makeCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.container, fragment)
             commit()
         }
 
-
-    override fun onNavigationItemSelected(it: MenuItem): Boolean {
-        when(it.itemId){
-            R.id.home -> makeCurrentFragment(HomeFragment())
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.home -> {
+                makeCurrentFragment(HomeFragment())
+                true
+            }
+            R.id.profile -> {
+                makeCurrentFragment(ProfileFragment())
+                true
+            }
+            else -> false
         }
-        return true
     }
-
 }
