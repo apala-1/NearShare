@@ -32,17 +32,15 @@
         android:layout_marginTop="16dp" />
 
     <!-- Profile Image -->
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivProfile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/profile"
-        android:scaleType="centerCrop"
-        android:contentDescription="Profile Picture"
-        app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Name -->
     <TextView
@@ -130,6 +128,7 @@
                         android:textColor="@android:color/darker_gray"
                         android:textSize="14sp" />
                 </LinearLayout>
+
             </LinearLayout>
 
             <!-- Email -->
@@ -283,11 +282,12 @@
 
             <!-- Privacy Settings -->
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="12dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -298,8 +298,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Privacy Settings"
                     android:layout_marginStart="12dp"
+                    android:text="Privacy Settings"
                     android:textSize="14sp" />
             </LinearLayout>
 
