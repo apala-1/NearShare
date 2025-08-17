@@ -1,3 +1,4 @@
 package com.example.nearshare.data
 
-data class Device(val name:String, val address: String)
+data class Device( val id: String, // endpointId
+                   val name: String)
